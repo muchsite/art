@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/art/static/css/main.97d49f59.css",
-    "main.js": "/art/static/js/main.5d31c18b.js",
+    "main.css": "/art/static/css/main.c04cb316.css",
+    "main.js": "/art/static/js/main.9568ff46.js",
     "static/media/home.png": "/art/static/media/home.5a4cc38638c819652815.png",
     "static/media/2.jpeg": "/art/static/media/2.a2bc4a5ee37a01f382e8.jpeg",
     "static/media/1.jpeg": "/art/static/media/1.52a66895c8ee68433047.jpeg",
@@ -20,17 +20,18 @@
     "static/media/dislike.svg": "/art/static/media/dislike.070c5705348df36f55bbc25eef88448b.svg",
     "static/media/like.svg": "/art/static/media/like.070c5705348df36f55bbc25eef88448b.svg",
     "static/media/favorite.svg": "/art/static/media/favorite.408e9414360e55ad8431d9c9d876f207.svg",
+    "static/media/arrowDown.svg": "/art/static/media/arrowDown.5d363364855005af1eaeb03352672511.svg",
     "static/media/square.svg": "/art/static/media/square.0dcdaa1ec4c729b6d0d701f765663006.svg",
     "static/media/search.svg": "/art/static/media/search.10d006f1f7e5df325bf6dbf6863471fd.svg",
     "static/media/login.svg": "/art/static/media/login.f2787688391e11b3f06184a580308770.svg",
     "index.html": "/art/index.html",
     "static/media/buy-crypto.svg": "/art/static/media/buy-crypto.1c22b2ca01b5facbffcc927e7afee62e.svg",
     "static/media/close.svg": "/art/static/media/close.ca6a2591997bdbc9749cb7f7f78782ea.svg",
-    "main.97d49f59.css.map": "/art/static/css/main.97d49f59.css.map",
-    "main.5d31c18b.js.map": "/art/static/js/main.5d31c18b.js.map"
+    "main.c04cb316.css.map": "/art/static/css/main.c04cb316.css.map",
+    "main.9568ff46.js.map": "/art/static/js/main.9568ff46.js.map"
   },
   "entrypoints": [
-    "static/css/main.97d49f59.css",
-    "static/js/main.5d31c18b.js"
+    "static/css/main.c04cb316.css",
+    "static/js/main.9568ff46.js"
   ]
 }
