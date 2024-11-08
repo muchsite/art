@@ -1,0 +1,48 @@
+.card_cont {
+  width: 24%;
+  .card_image {
+    width: 100%;
+    border-radius: 8px;
+    outline: 1px solid #75e69f;
+  }
+  background-color: #181919;
+  padding: 12px;
+  border-radius: 8px;
+}
+.card_btns {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  img {
+    height: 16.56px;
+    width: 16.56px;
+  }
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    gap: 5px;
+    color: #fff;
+  }
+  .bhs_like {
+    img {
+      filter: invert(76%) sepia(60%) saturate(6965%) hue-rotate(110deg)
+        brightness(97%) contrast(103%);
+    }
+  }
+  .bhs_dislike {
+    img {
+      filter: invert(37%) sepia(64%) saturate(4247%) hue-rotate(350deg)
+        brightness(97%) contrast(93%);
+    }
+  }
+  .bhs_fav {
+    img {
+      filter: invert(18%) sepia(70%) saturate(6679%) hue-rotate(310deg)
+        brightness(107%) contrast(114%);
+    }
+  }
+}

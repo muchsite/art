@@ -1,0 +1,19 @@
+.normal_cards_container {
+  padding-right: 2rem;
+  background-color: #000;
+  h2 {
+    color: #fff;
+    padding: 2rem 0;
+    font-size: 28px;
+    font-weight: 400;
+  }
+  .normal_cards {
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+    row-gap: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 2rem 0;
+  }
+}

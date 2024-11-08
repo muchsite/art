@@ -1,0 +1,182 @@
+.blog_hero_container {
+  background-color: #000;
+  width: 100%;
+  padding-right: 2rem;
+  .blog_header {
+    padding: 2rem 0;
+    input {
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      color: #d5d5e2;
+      background-color: #101010;
+      border: 1px solid #15b79e;
+      border-radius: 44px;
+      padding: 12px 16px;
+    }
+  }
+  .blog_hero {
+    background-color: #181919;
+    padding: 2rem;
+    border-radius: 16px;
+    .bh_image {
+      margin-bottom: 1rem;
+      img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 18px;
+        border: 1px solid #75e69f;
+      }
+    }
+    .blog_hero_btns {
+      display: flex;
+      justify-content: space-between;
+      .blog_hero_likes_btn {
+        display: flex;
+        gap: 1rem;
+        .bh_likes {
+          display: flex;
+          border: 1px solid #505050;
+          border-radius: 8px;
+          button {
+            background-color: transparent;
+            border: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #d8d8d8;
+            padding: 8px 0;
+            justify-content: center;
+            font-size: 22px;
+            width: 10rem;
+            cursor: pointer;
+            img {
+              width: 32px;
+              height: 32px;
+            }
+          }
+          .db_left_b {
+            border-left: 1px solid #505050;
+          }
+        }
+        .faw_btn {
+          background-color: transparent;
+          border: 1px solid #ff00b8;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          color: #d8d8d8;
+          padding: 8px 0;
+          justify-content: center;
+          font-size: 22px;
+          width: 10rem;
+          cursor: pointer;
+          img {
+            width: 32px;
+            height: 32px;
+          }
+        }
+      }
+      .blog_hero_tips {
+        display: flex;
+        gap: 1rem;
+        button {
+          cursor: pointer;
+        }
+        .tips_btn {
+          display: flex;
+          align-items: center;
+          width: 7rem;
+          justify-content: center;
+          color: #eaaa08;
+          background-color: transparent;
+          border: 1px solid #eaaa08;
+          border-radius: 8px;
+          gap: 5px;
+        }
+        .dow_btn {
+          display: flex;
+          align-items: center;
+          width: 10rem;
+          justify-content: center;
+          color: #fff;
+          background-color: #15b79e;
+          border: 1px solid #15b79e;
+          border-radius: 8px;
+          gap: 5px;
+        }
+      }
+    }
+    .blog_hero_stats {
+      display: flex;
+      justify-content: space-between;
+      margin: 3rem 0;
+      .blog_hero_info {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        p {
+          color: #d8d8d8;
+          font-size: 16px;
+          font-weight: 400;
+        }
+        h3 {
+          font-weight: 400;
+          font-size: 28px;
+          color: #fff;
+        }
+        img {
+          width: 88px;
+          height: 88px;
+          border-radius: 50%;
+        }
+      }
+      .blog_hero_stats_btns {
+        display: flex;
+        gap: 2.5rem;
+        img {
+          height: 30px;
+        }
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 27px;
+          background-color: transparent;
+          border: none;
+          gap: 12px;
+          color: #fff;
+        }
+        .bhs_like {
+          img {
+            filter: invert(76%) sepia(60%) saturate(6965%) hue-rotate(110deg)
+              brightness(97%) contrast(103%);
+          }
+        }
+        .bhs_dislike {
+          img {
+            filter: invert(37%) sepia(64%) saturate(4247%) hue-rotate(350deg)
+              brightness(97%) contrast(93%);
+          }
+        }
+        .bhs_fav {
+          img {
+            filter: invert(18%) sepia(70%) saturate(6679%) hue-rotate(310deg)
+              brightness(107%) contrast(114%);
+          }
+        }
+      }
+    }
+    .blog_hero_text {
+      p {
+        color: #d8d8d8;
+      }
+      .breack {
+        height: 1rem;
+      }
+    }
+  }
+}
