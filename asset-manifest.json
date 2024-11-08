@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/art/static/css/main.97d49f59.css",
-    "main.js": "/art/static/js/main.82a4d971.js",
+    "main.js": "/art/static/js/main.5d31c18b.js",
     "static/media/home.png": "/art/static/media/home.5a4cc38638c819652815.png",
     "static/media/2.jpeg": "/art/static/media/2.a2bc4a5ee37a01f382e8.jpeg",
     "static/media/1.jpeg": "/art/static/media/1.52a66895c8ee68433047.jpeg",
@@ -27,10 +27,10 @@
     "static/media/buy-crypto.svg": "/art/static/media/buy-crypto.1c22b2ca01b5facbffcc927e7afee62e.svg",
     "static/media/close.svg": "/art/static/media/close.ca6a2591997bdbc9749cb7f7f78782ea.svg",
     "main.97d49f59.css.map": "/art/static/css/main.97d49f59.css.map",
-    "main.82a4d971.js.map": "/art/static/js/main.82a4d971.js.map"
+    "main.5d31c18b.js.map": "/art/static/js/main.5d31c18b.js.map"
   },
   "entrypoints": [
     "static/css/main.97d49f59.css",
-    "static/js/main.82a4d971.js"
+    "static/js/main.5d31c18b.js"
   ]
 }
