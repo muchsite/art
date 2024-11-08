@@ -7,14 +7,11 @@ import fav from "../../assets/favorite.svg";
 import tips from "../../assets/buy-crypto.svg";
 import down from "../../assets/download.svg";
 import profile from "../../assets/profile.jpeg";
+import SearchNav from "../searchNav/SearchNav";
 const BlogHero = () => {
   return (
     <div className="blog_hero_container">
-      <div className="blog_header">
-        <div className="bolg_input_div">
-          <input type="text" />
-        </div>
-      </div>
+      <SearchNav />
       <div className="blog_hero">
         <div className="bh_image">
           <img src={hm} alt="" />

@@ -1,5 +1,9 @@
 .card_cont {
   width: 24%;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   .card_image {
     width: 100%;
     border-radius: 8px;
