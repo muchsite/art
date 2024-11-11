@@ -8,10 +8,11 @@ import tips from "../../assets/buy-crypto.svg";
 import down from "../../assets/download.svg";
 import profile from "../../assets/profile.jpeg";
 import SearchNav from "../searchNav/SearchNav";
+import Carousel from "../carousel/Carousel";
 const BlogHero: React.FC = () => {
   return (
     <div className="blog_hero_container">
-      {/* <SearchNav /> */}
+      <SearchNav />
       <div className="blog_hero">
         <div className="bh_image">
           <img src={hm} alt="" />
@@ -87,6 +88,10 @@ const BlogHero: React.FC = () => {
             sed euismod sem pharetra et. Mauris iaculis rutrum diam at luctus
             Read More...
           </p>
+          <div className="blog_carousel_container">
+            <h3>Series</h3>
+            <Carousel />
+          </div>
         </div>
       </div>
     </div>

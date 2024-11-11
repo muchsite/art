@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./App.scss";
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Nav from "./components/nav/Nav";
 import Footer from "./components/footer/Footer";

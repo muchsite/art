@@ -13,6 +13,7 @@ const Carousel: React.FC = () => {
     infinite: true,
     slidesToShow: 4,
     speed: 500,
+    dots: false,
     responsive: [
       {
         breakpoint: 1164,
@@ -21,7 +22,6 @@ const Carousel: React.FC = () => {
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
         },
       },
       {
@@ -31,7 +31,6 @@ const Carousel: React.FC = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
         },
       },
     ],

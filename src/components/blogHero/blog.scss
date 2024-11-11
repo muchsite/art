@@ -3,6 +3,7 @@
   background-color: #000;
   width: 100%;
   padding-right: 2rem;
+  overflow: hidden;
   @include breack_down(large) {
     padding: 0 1rem;
   }
@@ -242,6 +243,27 @@
       .breack {
         height: 1rem;
       }
+    }
+  }
+}
+.blog_carousel_container {
+  padding: 48px 40px;
+  border-radius: 16px;
+  background-color: #202020;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 32px;
+  @include breack_down(large) {
+    padding: 19px 10px;
+    gap: 16px;
+  }
+  h3 {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 400;
+    @include breack_down(large) {
+      font-size: 18px;
     }
   }
 }
