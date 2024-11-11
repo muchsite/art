@@ -1,0 +1,27 @@
+@use "../../App.scss" as *;
+.list_container {
+  display: flex;
+  background-color: #000;
+  @include breack_down(large) {
+    flex-direction: column;
+  }
+}
+.list_cards_container {
+  width: 100%;
+  height: fit-content;
+  gap: 10px;
+  row-gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.display_none_mobile {
+  @include breack_down(large) {
+    display: none;
+  }
+}
+.display_none_desktop {
+  @include breack_up(medium) {
+    display: none;
+  }
+}

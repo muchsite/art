@@ -1,0 +1,183 @@
+@use "../../App.scss" as *;
+.acc_container {
+  background-image: linear-gradient(to bottom, #10101099, #10101099),
+    url("../../assets/home.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include breack_down(large) {
+    height: auto;
+  }
+  .acc_form_container {
+    display: flex;
+    align-items: center;
+    width: 60vw;
+    height: 70vh;
+
+    @include breack_down(large) {
+      flex-direction: column;
+      width: 90vw;
+      height: auto;
+      padding: 20px;
+    }
+    .acc_left {
+      width: 50%;
+      background-color: #202020;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      height: 100%;
+      padding: 72px;
+      @include breack_down(large) {
+        width: 100%;
+        padding: 20px;
+        border-radius: 12px 12px 0 0;
+      }
+    }
+    .acc_right {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 42px;
+      gap: 31px;
+      background-color: #181919;
+      color: #fff;
+      @include breack_down(large) {
+        width: 100%;
+        padding: 20px;
+        border-radius: 0 0 12px 12px;
+        gap: 10px;
+      }
+      h2 {
+        font-size: 28px;
+        font-weight: 500;
+        @include breack_down(large) {
+          font-size: 20px;
+          text-align: center;
+        }
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        @include breack_down(large) {
+          gap: 12px;
+        }
+        .input_div_f {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          @include breack_down(large) {
+            gap: 4px;
+          }
+          input {
+            background-color: transparent;
+            border-radius: 8px;
+            padding: 8px;
+            border: 1px solid #66666659;
+            color: #fff;
+            @include breack_down(large) {
+              font-size: 12px;
+            }
+          }
+          label {
+            font-size: 16px;
+            font-weight: 400;
+            color: #808080;
+            @include breack_down(large) {
+              font-size: 12px;
+            }
+          }
+        }
+        .input_div_s_container {
+          display: flex;
+          gap: 18px;
+          .input_div_s {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            input {
+              width: 100%;
+              background-color: transparent;
+              border-radius: 8px;
+              padding: 8px;
+              border: 1px solid #66666659;
+              color: #fff;
+            }
+            label {
+              font-size: 16px;
+              font-weight: 400;
+              color: #808080;
+            }
+          }
+        }
+        .input_btn_f {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          padding: 17px;
+          background-color: #202020;
+          border-radius: 40px;
+          cursor: pointer;
+          font-size: 20px;
+          border: 1px solid #303030;
+          gap: 16px;
+          @include breack_down(large) {
+            padding: 8px;
+            font-size: 12px;
+          }
+          img {
+            @include breack_down(large) {
+              width: 16px;
+            }
+          }
+        }
+        .input_btn_s {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          padding: 17px;
+          background-color: #15b79e;
+          border-radius: 40px;
+          cursor: pointer;
+          font-size: 20px;
+          border: none;
+          gap: 16px;
+          @include breack_down(large) {
+            padding: 8px;
+            font-size: 12px;
+          }
+          img {
+            @include breack_down(large) {
+              width: 16px;
+            }
+          }
+        }
+      }
+      .s_in {
+        @include breack_down(large) {
+          font-size: 12px;
+        }
+        span {
+          color: #666666;
+        }
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

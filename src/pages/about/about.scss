@@ -1,0 +1,75 @@
+@use "../../App.scss" as *;
+.about_container {
+  padding: 2rem;
+  background-color: #000;
+  @include breack_down(large) {
+    padding: 1rem;
+  }
+  .about_search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    input {
+      width: 100%;
+      padding: 12px 24px;
+      background-color: transparent;
+      border: 1px solid #505050;
+      border-radius: 40px;
+      color: #d5d5e2;
+      @include breack_down(large) {
+        padding: 8px 16px;
+      }
+    }
+    img {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      translate: -100% -50%;
+    }
+  }
+  .bout_body {
+    margin-top: 2rem;
+    background-color: #101010;
+    border-radius: 8px;
+    h2 {
+      background-color: #181919;
+      padding: 32px 80px;
+      color: #d8d8d8;
+      font-weight: 600;
+      font-size: 36px;
+      @include breack_down(large) {
+        padding: 20px 40px;
+        font-size: 26px;
+      }
+    }
+    .about_text {
+      padding: 32px 80px;
+      color: #c0c0c0;
+      font-size: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      @include breack_down(large) {
+        padding: 20px 40px;
+        font-size: 16px;
+        gap: 12px;
+      }
+      p {
+        font-size: 18px;
+        font-weight: 400;
+      }
+      ol {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
+    .about_carusel_container {
+      padding: 32px 80px;
+      @include breack_down(large) {
+        padding: 20px 40px;
+      }
+    }
+  }
+}

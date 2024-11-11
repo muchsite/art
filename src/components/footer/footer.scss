@@ -1,0 +1,129 @@
+@use "../../App.scss" as *;
+footer {
+  background-color: #101010;
+  color: #fff;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  @include breack_down(large) {
+    padding: 1rem;
+  }
+  .footer_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .footer_btn {
+      display: flex;
+      background-color: #505050;
+      gap: 5px;
+      align-items: center;
+      height: fit-content;
+      border-radius: 40px;
+      padding: 16px 40px;
+      cursor: pointer;
+      @include breack_down(large) {
+        padding: 7px 14px;
+        border-radius: 20px;
+      }
+      p {
+        font-size: 18px;
+        @include breack_down(large) {
+          font-size: 12px;
+        }
+      }
+      img {
+        width: 20px;
+        height: 20px;
+        @include breack_down(large) {
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+    .nav_links {
+      display: flex;
+      gap: 1rem;
+      @include breack_down(large) {
+        display: none;
+      }
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+      .active_nav {
+        color: #ee4723;
+      }
+    }
+    .footer_sign {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      button {
+        display: flex;
+        align-items: center;
+        background-color: #15b79e;
+        border-radius: 40px;
+        color: #fff;
+        border: none;
+        padding: 8px 16px;
+        gap: 5px;
+        @include breack_down(large) {
+          padding: 7px 14px;
+          border-radius: 20px;
+        }
+        img {
+          @include breack_down(large) {
+            width: 14px;
+            height: 14px;
+          }
+        }
+      }
+      img {
+        @include breack_down(large) {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+  }
+  .footer_body {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    @include breack_down(large) {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+    .f_body_f {
+      width: 20%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @include breack_down(large) {
+        flex-direction: row;
+        width: 90%;
+        align-items: center;
+      }
+      .footer_social {
+        display: flex;
+        gap: 1rem;
+      }
+    }
+    .footer_body_s_container {
+      display: flex;
+      width: 40%;
+      justify-content: space-between;
+      @include breack_down(large) {
+        width: 80%;
+        margin-top: 1rem;
+      }
+      .footer_body_s {
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+      }
+    }
+  }
+}

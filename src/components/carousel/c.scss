@@ -1,0 +1,31 @@
+@use "../../App.scss" as *;
+.custom_slide {
+  padding-right: 30px;
+  position: relative;
+  translate: -30px 0;
+  height: 200px;
+  object-fit: cover;
+  overflow: hidden;
+  @include breack_down(large) {
+    padding-right: -0px;
+    translate: -0px 0;
+  }
+  img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    border: 1px solid #75e69f;
+    border-radius: 12px;
+  }
+}
+.slick-list {
+  @include breack_down(large) {
+    margin: 0 -5px;
+  }
+}
+.slick-slide > div {
+  @include breack_down(large) {
+    padding: 0 5px;
+  }
+}
