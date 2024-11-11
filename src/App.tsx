@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./App.scss";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Nav from "./components/nav/Nav";
 import Footer from "./components/footer/Footer";
@@ -17,7 +17,7 @@ import TagsH from "./pages/tagsh/TagsH";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Nav />
         <div style={{ paddingTop: "4rem" }}></div>
         <Routes>
@@ -31,7 +31,7 @@ function App() {
           <Route element={<TagsH />} path="/tagshelp" />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
