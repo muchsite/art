@@ -14,6 +14,8 @@ import Normal from "./pages/normal/Normal";
 import Support from "./pages/support/Support";
 import Tags from "./pages/tags/Tags";
 import TagsH from "./pages/tagsh/TagsH";
+import Creator from "./pages/normal/Creator";
+import Series from "./pages/normal/Series";
 function App() {
   return (
     <div className="App">
@@ -23,6 +25,8 @@ function App() {
         <Routes>
           <Route element={<Home />} path="/" />
           <Route element={<Normal />} path="/normal" />
+          <Route element={<Creator />} path="/creator" />
+          <Route element={<Series />} path="/series" />
           <Route element={<About />} path="/about" />
           <Route element={<Acc />} path="/account" />
           <Route element={<List />} path="/list" />

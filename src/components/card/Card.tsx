@@ -10,12 +10,11 @@ interface CardData {
 
 interface CardProps {
   data: CardData;
-  key: string | number;
 }
 
-const Card: React.FC<CardProps> = ({ data, key }) => {
+const Card: React.FC<CardProps> = ({ data }) => {
   return (
-    <div key={key} className="card_cont">
+    <div className="card_cont">
       <img src={data.img} alt="card" className="card_image" />
       <div className="card_btns">
         <button className="bhs_like">

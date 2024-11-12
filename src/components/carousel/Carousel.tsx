@@ -39,9 +39,9 @@ const Carousel: React.FC = () => {
     <div>
       <div className="slider-container">
         <Slider {...settings}>
-          {arr.map((item) => {
+          {arr.map((item, index) => {
             return (
-              <div className="custom_slide">
+              <div className="custom_slide" key={index}>
                 <img src={item} alt="" className="" />;
               </div>
             );

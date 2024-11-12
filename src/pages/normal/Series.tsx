@@ -6,6 +6,7 @@ import f2 from "../../assets/2.jpeg";
 import f3 from "../../assets/3.jpeg";
 import f4 from "../../assets/4.jpeg";
 import Card from "../../components/card/Card";
+//
 import hm from "../../assets/hm.jpeg";
 import disLike from "../../assets/dislike.svg";
 import like from "../../assets/like.svg";
@@ -14,8 +15,10 @@ import tips from "../../assets/buy-crypto.svg";
 import down from "../../assets/download.svg";
 import profile from "../../assets/profile.jpeg";
 import SearchNav from "../../components/searchNav/SearchNav";
-import avatar from "../../assets/av1.png";
-const Normal: React.FC = () => {
+
+import Carousel from "../../components/carousel/Carousel";
+import Comments from "../../components/comments/Comments";
+const Series: React.FC = () => {
   const arr = [
     { img: f, likes: "1.81k", dislikes: "16", favs: "1.8k" },
     { img: f2, likes: "1.81k", dislikes: "16", favs: "1.8k" },
@@ -111,14 +114,11 @@ const Normal: React.FC = () => {
                   Curabitur pellentesque convallis risus, sed euismod sem
                   pharetra et. Mauris iaculis rutrum diam at luctus Read More...
                 </p>
-                <div className="normal_input_section">
-                  <img src={avatar} alt="" />
-                  <textarea
-                    name=""
-                    id=""
-                    placeholder="Add a comment..."
-                  ></textarea>
+                <div className="blog_carousel_container">
+                  <h3>Series</h3>
+                  <Carousel />
                 </div>
+                <Comments />
               </div>
             </div>
           </div>
@@ -139,4 +139,4 @@ const Normal: React.FC = () => {
   );
 };
 
-export default Normal;
+export default Series;
