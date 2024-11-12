@@ -132,6 +132,22 @@ const Nav: React.FC = () => {
           className={({ isActive, isPending }) =>
             isPending ? "pending_nav" : isActive ? "active_nav" : ""
           }
+          to="/series"
+        >
+          Series
+        </NavLink>
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isPending ? "pending_nav" : isActive ? "active_nav" : ""
+          }
+          to="/creator"
+        >
+          Creator
+        </NavLink>
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isPending ? "pending_nav" : isActive ? "active_nav" : ""
+          }
           to="/list"
           onClick={() => setOpenHam(false)}
         >
