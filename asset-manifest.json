@@ -1,13 +1,16 @@
 {
   "files": {
-    "main.css": "/art/static/css/main.5d0bc060.css",
-    "main.js": "/art/static/js/main.66769a80.js",
+    "main.css": "/art/static/css/main.ead3699a.css",
+    "main.js": "/art/static/js/main.84346dc5.js",
     "static/media/home.png": "/art/static/media/home.5a4cc38638c819652815.png",
+    "static/media/av1.png": "/art/static/media/av1.753a508451b232b8aa5d.png",
     "static/media/2.jpeg": "/art/static/media/2.a2bc4a5ee37a01f382e8.jpeg",
     "static/media/1.jpeg": "/art/static/media/1.52a66895c8ee68433047.jpeg",
     "static/media/hm.jpeg": "/art/static/media/hm.52a66895c8ee68433047.jpeg",
     "static/media/4.jpeg": "/art/static/media/4.2b75d270588ce0019e9e.jpeg",
     "static/media/3.jpeg": "/art/static/media/3.a18e9a09bcf3388d5d50.jpeg",
+    "static/media/av3.png": "/art/static/media/av3.c797feb83974cc77e41d.png",
+    "static/media/av2.png": "/art/static/media/av2.a83612eec117b98501a8.png",
     "static/media/instagram.svg": "/art/static/media/instagram.e4f97b7d92474b45d82801b256919472.svg",
     "static/media/profile.jpeg": "/art/static/media/profile.73ebecdbe578dbd03419.jpeg",
     "static/media/x.svg": "/art/static/media/x.1a4cb917bcff39ce92a8c21705bd841d.svg",
@@ -24,10 +27,12 @@
     "static/media/import.svg": "/art/static/media/import.0a432923eedfa6822195b89982229f3e.svg",
     "static/media/menu.svg": "/art/static/media/menu.4fe713acfe25228229e5823251f7ca2e.svg",
     "static/media/edit.svg": "/art/static/media/edit.298f93964436c7541e68fd05fefdc21f.svg",
+    "static/media/like.svg": "/art/static/media/like.1cc3acccf9fb21d67b553eb638662fea.svg",
     "static/media/dislike.svg": "/art/static/media/dislike.070c5705348df36f55bbc25eef88448b.svg",
-    "static/media/like.svg": "/art/static/media/like.070c5705348df36f55bbc25eef88448b.svg",
     "static/media/favorite.svg": "/art/static/media/favorite.408e9414360e55ad8431d9c9d876f207.svg",
     "static/media/camera.svg": "/art/static/media/camera.fdfb5625697e5944b211e3f2488cb879.svg",
+    "static/media/cDislike.svg": "/art/static/media/cDislike.b7b3ce448bc3af6af05b3b3536cefcae.svg",
+    "static/media/cLike.svg": "/art/static/media/cLike.f9459e696646905d7facd04cead00610.svg",
     "static/media/square.svg": "/art/static/media/square.0dcdaa1ec4c729b6d0d701f765663006.svg",
     "static/media/s1.svg": "/art/static/media/s1.8bd9a1705741a242f10c2c85413c45a9.svg",
     "static/media/search.svg": "/art/static/media/search.10d006f1f7e5df325bf6dbf6863471fd.svg",
@@ -36,13 +41,16 @@
     "static/media/s2.svg": "/art/static/media/s2.ec7d9b160ef417a8902283af77ffd86a.svg",
     "static/media/buy-crypto.svg": "/art/static/media/buy-crypto.1c22b2ca01b5facbffcc927e7afee62e.svg",
     "static/media/upload.svg": "/art/static/media/upload.d626720705297cbecea8b965bf864a18.svg",
+    "static/media/rep.svg": "/art/static/media/rep.65251622abc9d019585b2c18db8e177f.svg",
     "static/media/ham.svg": "/art/static/media/ham.d80a1023d7c4219aa6adf926a9688fc1.svg",
+    "static/media/remove.svg": "/art/static/media/remove.a76bd69016b75deda6587535482ec0e0.svg",
     "static/media/close.svg": "/art/static/media/close.ca6a2591997bdbc9749cb7f7f78782ea.svg",
-    "main.5d0bc060.css.map": "/art/static/css/main.5d0bc060.css.map",
-    "main.66769a80.js.map": "/art/static/js/main.66769a80.js.map"
+    "static/media/rightArrow.svg": "/art/static/media/rightArrow.23bb3c678f3781fee015ca4054af2315.svg",
+    "main.ead3699a.css.map": "/art/static/css/main.ead3699a.css.map",
+    "main.84346dc5.js.map": "/art/static/js/main.84346dc5.js.map"
   },
   "entrypoints": [
-    "static/css/main.5d0bc060.css",
-    "static/js/main.66769a80.js"
+    "static/css/main.ead3699a.css",
+    "static/js/main.84346dc5.js"
   ]
 }
