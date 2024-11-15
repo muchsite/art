@@ -137,12 +137,11 @@
         display: flex;
         align-items: center;
         gap: 0.5rem;
+
+        cursor: pointer;
         p {
           color: #8c8d94;
           font-size: 12px;
-        }
-        img {
-          cursor: pointer;
         }
       }
     }

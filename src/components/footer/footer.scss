@@ -2,17 +2,18 @@
 footer {
   background-color: #101010;
   color: #fff;
-  padding: 3rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  @include breack_down(large) {
-    padding: 1rem;
-  }
+
   .footer_head {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 3rem;
+    @include breack_down(large) {
+      padding: 1rem;
+    }
     .footer_btn {
       display: flex;
       background-color: #505050;
@@ -52,7 +53,7 @@ footer {
         text-decoration: none;
       }
       .active_nav {
-        color: #ee4723;
+        color: #15b79e;
       }
     }
     .footer_sign {
@@ -91,7 +92,10 @@ footer {
     display: flex;
     justify-content: center;
     margin-top: 2rem;
+    padding: 3rem;
+
     @include breack_down(large) {
+      padding: 1rem;
       flex-direction: column;
       gap: 1rem;
       align-items: center;
@@ -124,6 +128,20 @@ footer {
         flex-direction: column;
         gap: 0.45rem;
       }
+    }
+  }
+  .footer_bottom {
+    background-color: #181919;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 0px;
+    color: #d5d5e2;
+    .footer_line {
+      height: 18px;
+      width: 2px;
+      background-color: #d5d5e2;
     }
   }
 }

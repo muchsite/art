@@ -9,7 +9,7 @@ import About from "./pages/about/about";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Acc from "./pages/acc/Acc";
-import List from "./pages/list/List";
+import Posts from "./pages/posts/Posts";
 import Normal from "./pages/normal/Normal";
 import Support from "./pages/support/Support";
 import Tags from "./pages/tags/Tags";
@@ -29,7 +29,7 @@ function App() {
           <Route element={<Series />} path="/series" />
           <Route element={<About />} path="/about" />
           <Route element={<Acc />} path="/account" />
-          <Route element={<List />} path="/list" />
+          <Route element={<Posts />} path="/posts" />
           <Route element={<Support />} path="/support" />
           <Route element={<Tags />} path="/tags" />
           <Route element={<TagsH />} path="/tagshelp" />

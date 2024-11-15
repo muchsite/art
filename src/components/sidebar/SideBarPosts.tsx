@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import menu from "../../assets/menu.svg";
+import remove from "../../assets/remove.svg";
 import close from "../../assets/close.svg";
-import sun from "../../assets/sun.svg";
 import spr from "../../assets/spr.svg";
+import sun from "../../assets/sun.svg";
 import "./sidebar.scss";
-const SideBar: React.FC = () => {
+const SideBarPosts: React.FC = () => {
   const [checked1, setChecked1] = useState(true);
   const [checked2, setChecked2] = useState(true);
   const [checked3, setChecked3] = useState(true);
@@ -12,26 +12,34 @@ const SideBar: React.FC = () => {
   const [checked5, setChecked5] = useState(true);
   return (
     <div className="sidebar_container">
-      <div className="sidebar_btn">
-        <div className="sidvar_btn_div">
-          <img src={menu} alt="" />
-          <span>Details</span>
-        </div>
-        <img src={close} alt="" />
-      </div>
       <div className="sidebar_p_container">
         <div className="sdiebar_links">
           <div className="sidebar_link sidebar_active_link">
             <img src={spr} alt="" />
             <span>All Arts</span>
           </div>
-          <div className="sidebar_link">Popart</div>
-          <div className="sidebar_link">Landscape</div>
-          <div className="sidebar_link">Photography</div>
-          <div className="sidebar_link">Portrait</div>
-          <div className="sidebar_link">Digitalart</div>
-          <div className="sidebar_link">Watercolor</div>
-          <div className="sidebar_link">Character Design</div>
+          <div className="sidebar_link_post">
+            <p>Popart</p>
+            <img src={remove} alt="" />
+          </div>
+          <div className="sidebar_link_post">
+            Landscape <img src={remove} alt="" />
+          </div>
+          <div className="sidebar_link_post">
+            Photography <img src={remove} alt="" />
+          </div>
+          <div className="sidebar_link_post">
+            Portrait <img src={remove} alt="" />
+          </div>
+          <div className="sidebar_link_post">
+            Digitalart <img src={remove} alt="" />
+          </div>
+          <div className="sidebar_link_post">
+            Watercolor <img src={remove} alt="" />
+          </div>
+          <div className="sidebar_link_post">
+            Character Design <img src={remove} alt="" />
+          </div>
           <div className="sidebar_link_all">
             Photography, Digitalart, Cosplay, Watercolor, Character Design,
             Concept Art
@@ -109,4 +117,4 @@ const SideBar: React.FC = () => {
   );
 };
 
-export default SideBar;
+export default SideBarPosts;

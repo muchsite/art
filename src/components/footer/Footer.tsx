@@ -25,21 +25,14 @@ const Footer: React.FC = () => {
             >
               Home
             </NavLink>
+
             <NavLink
               className={({ isActive, isPending }) =>
                 isPending ? "pending_nav" : isActive ? "active_nav" : ""
               }
-              to="/normal"
+              to="/posts"
             >
-              Normal
-            </NavLink>
-            <NavLink
-              className={({ isActive, isPending }) =>
-                isPending ? "pending_nav" : isActive ? "active_nav" : ""
-              }
-              to="/list"
-            >
-              List
+              Posts
             </NavLink>
             <NavLink
               className={({ isActive, isPending }) =>
@@ -120,6 +113,11 @@ const Footer: React.FC = () => {
             <p>Creators</p>
           </div>
         </div>
+      </div>
+      <div className="footer_bottom">
+        <p>@company name</p>
+        <div className="footer_line"></div>
+        <p>All right reserved</p>
       </div>
     </footer>
   );

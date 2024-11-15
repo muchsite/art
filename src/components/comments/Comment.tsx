@@ -61,8 +61,8 @@ const Comment: React.FC<CommentProps> = ({
             </div>
           </div>
           <div className="s_comment_btns">
-            <div className="s_comment_btn">
-              <img src={rep} alt="" onClick={handleOpen} />
+            <div className="s_comment_btn" onClick={handleOpen}>
+              <img src={rep} alt="" />
               <p>Reply</p>
             </div>
             <div className="s_comment_btn">
@@ -77,7 +77,7 @@ const Comment: React.FC<CommentProps> = ({
         </div>
         <div className="s_comment_right">
           <img src={tips} alt="" />
-          <p>Tips</p>
+          <p>Tip</p>
         </div>
         {openReply && (
           <div

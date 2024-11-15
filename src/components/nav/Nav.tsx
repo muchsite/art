@@ -21,37 +21,14 @@ const Nav: React.FC = () => {
         >
           Home
         </NavLink>
+
         <NavLink
           className={({ isActive, isPending }) =>
             isPending ? "pending_nav" : isActive ? "active_nav" : ""
           }
-          to="/normal"
+          to="/posts"
         >
-          Normal
-        </NavLink>
-        <NavLink
-          className={({ isActive, isPending }) =>
-            isPending ? "pending_nav" : isActive ? "active_nav" : ""
-          }
-          to="/series"
-        >
-          Series
-        </NavLink>
-        <NavLink
-          className={({ isActive, isPending }) =>
-            isPending ? "pending_nav" : isActive ? "active_nav" : ""
-          }
-          to="/creator"
-        >
-          Creator
-        </NavLink>
-        <NavLink
-          className={({ isActive, isPending }) =>
-            isPending ? "pending_nav" : isActive ? "active_nav" : ""
-          }
-          to="/list"
-        >
-          List
+          Posts
         </NavLink>
         <NavLink
           className={({ isActive, isPending }) =>
@@ -123,35 +100,10 @@ const Nav: React.FC = () => {
           className={({ isActive, isPending }) =>
             isPending ? "pending_nav" : isActive ? "active_nav" : ""
           }
-          to="/normal"
+          to="/posts"
           onClick={() => setOpenHam(false)}
         >
-          Normal
-        </NavLink>
-        <NavLink
-          className={({ isActive, isPending }) =>
-            isPending ? "pending_nav" : isActive ? "active_nav" : ""
-          }
-          to="/series"
-        >
-          Series
-        </NavLink>
-        <NavLink
-          className={({ isActive, isPending }) =>
-            isPending ? "pending_nav" : isActive ? "active_nav" : ""
-          }
-          to="/creator"
-        >
-          Creator
-        </NavLink>
-        <NavLink
-          className={({ isActive, isPending }) =>
-            isPending ? "pending_nav" : isActive ? "active_nav" : ""
-          }
-          to="/list"
-          onClick={() => setOpenHam(false)}
-        >
-          List
+          Posts
         </NavLink>
         <NavLink
           className={({ isActive, isPending }) =>

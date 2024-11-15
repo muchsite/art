@@ -16,7 +16,6 @@ import down from "../../assets/download.svg";
 import profile from "../../assets/profile.jpeg";
 import SearchNav from "../../components/searchNav/SearchNav";
 
-import Carousel from "../../components/carousel/Carousel";
 import Comments from "../../components/comments/Comments";
 const Creator: React.FC = () => {
   const arr = [
@@ -62,11 +61,11 @@ const Creator: React.FC = () => {
                 <div className="blog_hero_tips">
                   <button className="tips_btn">
                     <img src={tips} alt="" />
-                    <p>Tips</p>
+                    <p>Tip</p>
                   </button>
                   <button className="dow_btn">
                     <img src={down} alt="" />
-                    <p>Downloads</p>
+                    <p>Download</p>
                   </button>
                 </div>
               </div>

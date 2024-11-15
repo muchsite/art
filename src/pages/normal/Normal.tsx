@@ -59,11 +59,11 @@ const Normal: React.FC = () => {
                 <div className="blog_hero_tips">
                   <button className="tips_btn">
                     <img src={tips} alt="" />
-                    <p>Tips</p>
+                    <p>Tip</p>
                   </button>
                   <button className="dow_btn">
                     <img src={down} alt="" />
-                    <p>Downloads</p>
+                    <p>Download</p>
                   </button>
                 </div>
               </div>

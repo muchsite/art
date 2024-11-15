@@ -15,7 +15,7 @@ nav {
 }
 .nav_links {
   display: flex;
-  gap: 1rem;
+  gap: 32px;
   @include breack_down(large) {
     display: none;
   }
@@ -24,7 +24,7 @@ nav {
     text-decoration: none;
   }
   .active_nav {
-    color: #ee4723;
+    color: #15b79e;
   }
 }
 .nav_apply_btn {
