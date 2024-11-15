@@ -24,9 +24,9 @@ function App() {
         <div style={{ paddingTop: "4rem" }}></div>
         <Routes>
           <Route element={<Home />} path="/" />
-          <Route element={<Normal />} path="/normal" />
-          <Route element={<Creator />} path="/creator" />
-          <Route element={<Series />} path="/series" />
+          <Route element={<Normal />} path="/posts/normal" />
+          <Route element={<Creator />} path="/posts/creator" />
+          <Route element={<Series />} path="/posts/series" />
           <Route element={<About />} path="/about" />
           <Route element={<Acc />} path="/account" />
           <Route element={<Posts />} path="/posts" />

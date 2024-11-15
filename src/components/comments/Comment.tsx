@@ -42,6 +42,7 @@ const Comment: React.FC<CommentProps> = ({
       setUpdateHeight(!updateHeight);
     }
   };
+
   return (
     <div
       className="sc_container"
@@ -63,7 +64,7 @@ const Comment: React.FC<CommentProps> = ({
           <div className="s_comment_btns">
             <div className="s_comment_btn" onClick={handleOpen}>
               <img src={rep} alt="" />
-              <p>Reply</p>
+              <p>Reply ({comment.replies.length})</p>
             </div>
             <div className="s_comment_btn">
               <img src={cLike} alt="" />

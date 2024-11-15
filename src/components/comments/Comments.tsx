@@ -74,7 +74,10 @@ const Comments: React.FC = () => {
         <img src={avatar} alt="" />
         <textarea name="" id="" placeholder="Add a comment..."></textarea>
       </div>
-      <p className="comments_header">Comments 03</p>
+      <p className="comments_header">
+        Comments{" "}
+        {comments.length < 10 ? `0${comments.length}` : comments.length}
+      </p>
       <div className="comments">
         {comments.map((comment) => (
           <Comment

@@ -3,6 +3,7 @@ import "./card.scss";
 import disLike from "../../assets/dislike.svg";
 import like from "../../assets/like.svg";
 import fav from "../../assets/favorite.svg";
+import { Link } from "react-router-dom";
 
 interface CardData {
   img: string;
@@ -15,7 +16,9 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ data }) => {
   return (
     <div className="card_cont">
-      <img src={data.img} alt="card" className="card_image" />
+      <Link to="/posts/series">
+        <img src={data.img} alt="card" className="card_image" />
+      </Link>
       <div className="card_btns">
         <button className="bhs_like">
           <img src={like} alt="like" />
