@@ -16,7 +16,7 @@ import down from "../../assets/download.svg";
 import profile from "../../assets/profile.jpeg";
 import SearchNav from "../../components/searchNav/SearchNav";
 
-import Carousel from "../../components/carousel/Carousel";
+import CarouselS from "../../components/carousel/CarouselS";
 import Comments from "../../components/comments/Comments";
 const Series: React.FC = () => {
   const arr = [
@@ -116,7 +116,7 @@ const Series: React.FC = () => {
                 </p>
                 <div className="blog_carousel_container">
                   <h3>Series</h3>
-                  <Carousel />
+                  <CarouselS />
                 </div>
                 <Comments />
               </div>

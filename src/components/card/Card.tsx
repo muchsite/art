@@ -16,7 +16,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ data }) => {
   return (
     <div className="card_cont">
-      <Link to="/posts/series">
+      <Link to="/posts/creator">
         <img src={data.img} alt="card" className="card_image" />
       </Link>
       <div className="card_btns">
