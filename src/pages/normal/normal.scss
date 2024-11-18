@@ -2,6 +2,10 @@
 .normal_contanier {
   display: flex;
   background-color: #000;
+  margin-top: 3rem;
+  @include breack_down(large) {
+    margin-top: 2.2rem;
+  }
   .blog_hero_width {
     width: 79%;
     @include breack_down(large) {

@@ -2,13 +2,51 @@
 nav {
   position: fixed;
   width: 100%;
+  z-index: 10;
   background-color: #101010;
+}
+.posts_nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #85ceef;
+  align-items: center;
+  border-radius: 8px;
+  padding: 14px;
+  @include breack_down(large) {
+    padding: 12px;
+  }
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #145b98;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    @include breack_down(large) {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  select {
+    background-color: transparent;
+    border: none;
+    color: #0e6db7;
+    cursor: pointer;
+    font-size: 18px;
+    @include breack_down(large) {
+      font-size: 12px;
+    }
+  }
+}
+.nav_container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
   color: #fff;
-  z-index: 10;
 }
 .nav_logo {
   font-size: 20px;
