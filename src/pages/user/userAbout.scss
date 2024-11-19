@@ -1,0 +1,38 @@
+.user_about_container {
+  padding: 40px 48px;
+  color: #d8d8d8;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: #101010;
+  border-radius: 8px;
+  h2 {
+    font-size: 36px;
+    font-weight: 600;
+  }
+  .user_about_text {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    font-size: 18px;
+    ol {
+      margin-left: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+  .user_about_social {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    h3 {
+      font-size: 36px;
+      font-weight: 600;
+    }
+    .user_about_social_icons {
+      display: flex;
+      gap: 16px;
+    }
+  }
+}

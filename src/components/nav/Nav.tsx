@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./nav.scss";
 
 import login from "../../assets/login.svg";
@@ -8,7 +8,9 @@ import ham from "../../assets/ham.svg";
 import close from "../../assets/close.svg";
 import le from "../../assets/lefftArrow.svg";
 import ri from "../../assets/rightArrow.svg";
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import profile from "../../assets/profile.jpeg";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import { useUser } from "../../Context";
 const Nav: React.FC = () => {
   const location = useLocation();
   const postNav = location.pathname.startsWith("/posts/");
@@ -28,6 +30,13 @@ const Nav: React.FC = () => {
     if (currentNav === "creator") handleNav("normal");
     if (currentNav === "normal") handleNav("series");
     if (currentNav === "series") handleNav("creator");
+  };
+
+  const { user, setUser } = useUser();
+  const handleLogOut = () => {
+    localStorage.removeItem("user");
+    setUser("");
+    navigate("/login");
   };
   return (
     <nav>
@@ -101,34 +110,34 @@ const Nav: React.FC = () => {
             className={({ isActive, isPending }) =>
               isPending ? "pending_nav" : isActive ? "active_nav" : ""
             }
-            to="/account"
-          >
-            Account
-          </NavLink>
-          <NavLink
-            className={({ isActive, isPending }) =>
-              isPending ? "pending_nav" : isActive ? "active_nav" : ""
-            }
             to="/tagshelp"
           >
             Tags Help
           </NavLink>
         </div>
-        <div className="nav_btns">
-          <div className="nav_apply_btn">
-            <img src={applay} alt="" />
-            <p>Apply for account</p>
+        {user ? (
+          <div className="profile_img_container">
+            <img src={profile} alt="" onClick={handleLogOut} />
           </div>
-          <button>
-            <img src={login} alt="" />
-            <span>Sign In</span>
-          </button>
-          <img src={square} alt="" className="nav_dots" />
-          <div className="ham_cons" onClick={() => setOpenHam(!openHam)}>
-            <img src={ham} alt="" className={`${openHam && "w_0"}`} />
-            <img src={close} alt="" className={`${!openHam && "w_0"}`} />
+        ) : (
+          <div className="nav_btns">
+            <Link to="/account" className="nav_apply_btn">
+              <img src={applay} alt="" />
+              <p>Apply for account</p>
+            </Link>
+            <Link to="/login">
+              <button>
+                <img src={login} alt="" />
+                <span>Sign In</span>
+              </button>
+            </Link>
+            <img src={square} alt="" className="nav_dots" />
+            <div className="ham_cons" onClick={() => setOpenHam(!openHam)}>
+              <img src={ham} alt="" className={`${openHam && "w_0"}`} />
+              <img src={close} alt="" className={`${!openHam && "w_0"}`} />
+            </div>
           </div>
-        </div>
+        )}
         <div className={`nav_links_hamburger ${openHam && "ham_nav_cont"}`}>
           <NavLink
             className={({ isActive, isPending }) =>
@@ -174,15 +183,6 @@ const Nav: React.FC = () => {
             onClick={() => setOpenHam(false)}
           >
             Tags
-          </NavLink>
-          <NavLink
-            className={({ isActive, isPending }) =>
-              isPending ? "pending_nav" : isActive ? "active_nav" : ""
-            }
-            to="/account"
-            onClick={() => setOpenHam(false)}
-          >
-            Account
           </NavLink>
           <NavLink
             className={({ isActive, isPending }) =>

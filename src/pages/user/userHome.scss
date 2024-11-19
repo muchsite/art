@@ -1,0 +1,74 @@
+.user_home_container {
+  display: flex;
+  flex-direction: column;
+  .user_home_item {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 56px;
+    .user_home_item_title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h3 {
+        font-size: 32px;
+        font-weight: 600;
+        color: #d5d5e2;
+      }
+      a {
+        font-size: 24px;
+        font-weight: 400;
+        text-decoration: none;
+        color: #0e6db7;
+      }
+    }
+    .user_home_cards_container {
+      width: 100%;
+      height: fit-content;
+      gap: 10px;
+      row-gap: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+  }
+  .user_home_followed_container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+  .user_home_forum_title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    h3 {
+      color: #d5d5e2;
+      font-size: 32px;
+      font-weight: 600;
+    }
+  }
+  .user_home_forum_container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .user_home_forum {
+      display: flex;
+      flex-direction: column;
+      border-radius: 8px;
+      gap: 9px;
+      background-color: #101010;
+      padding: 16px 24px;
+      h4 {
+        color: #d5d5e2;
+        font-size: 18px;
+        font-weight: 700;
+      }
+      p {
+        color: #d5d5e2;
+        font-size: 14px;
+        font-weight: 300;
+      }
+    }
+  }
+}
