@@ -1,16 +1,16 @@
 import React from "react";
 import "./cuHome.scss";
-import f from "../../assets/1.jpeg";
-import s from "../../assets/1.jpeg";
-import t from "../../assets/1.jpeg";
-import fo from "../../assets/1.jpeg";
+import f from "../../../assets/1.jpeg";
+import s from "../../../assets/1.jpeg";
+import t from "../../../assets/1.jpeg";
+import fo from "../../../assets/1.jpeg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
-import Card from "../../components/card/Card";
+import Card from "../../../components/card/Card";
 import { Link } from "react-router-dom";
 
 const CreatorUserHome = () => {

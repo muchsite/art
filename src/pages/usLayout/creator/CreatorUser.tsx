@@ -1,7 +1,7 @@
 import React from "react";
-import ed from "../../assets/editUser.svg";
-import edCreator from "../../assets/editcreator.svg";
-import profile from "../../assets/profile.jpeg";
+import ed from "../../../assets/editUser.svg";
+import edCreator from "../../../assets/editcreator.svg";
+import profile from "../../../assets/profile.jpeg";
 import "./creaoruser.scss";
 import { Link, useSearchParams } from "react-router-dom";
 import CreatorUserHome from "./CreatorUserHome";

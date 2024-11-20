@@ -17,6 +17,7 @@ const Nav: React.FC = () => {
   const navigate = useNavigate();
   const [openHam, setOpenHam] = useState(false);
   const [currentNav, setCurrentNav] = useState("creator");
+  const [userMenu, setUserMenu] = useState(false);
   const handleNav = (val: string) => {
     setCurrentNav(val);
     navigate(`/posts/${val}`);
@@ -35,6 +36,8 @@ const Nav: React.FC = () => {
   const { user, setUser } = useUser();
   const handleLogOut = () => {
     localStorage.removeItem("user");
+    localStorage.removeItem("userType");
+    setUserMenu(false);
     setUser("");
     navigate("/login");
   };
@@ -117,7 +120,32 @@ const Nav: React.FC = () => {
         </div>
         {user ? (
           <div className="profile_img_container">
-            <img src={profile} alt="" onClick={handleLogOut} />
+            <img
+              src={profile}
+              alt=""
+              className="nav_profile"
+              onClick={() => setUserMenu(!userMenu)}
+            />
+            {userMenu && (
+              <div className="nav_profile_menu">
+                <Link
+                  onClick={() => setUserMenu(false)}
+                  to={`${localStorage.getItem("userType")}?home=true`}
+                >
+                  Home
+                </Link>
+                <Link onClick={() => setUserMenu(false)} to="/stats">
+                  Stats
+                </Link>
+                <Link
+                  onClick={() => setUserMenu(false)}
+                  to="/creator?home=true"
+                >
+                  Messiges
+                </Link>
+                <p onClick={handleLogOut}>Log Out</p>
+              </div>
+            )}
           </div>
         ) : (
           <div className="nav_btns">

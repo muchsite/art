@@ -7,18 +7,20 @@ import "./login.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { useUser } from "../../Context";
 const LogIn: React.FC = () => {
-  const { user, setUser } = useUser();
+  const { user, setUser, userType, setUserType } = useUser();
   const navigate = useNavigate();
   const [name, setName] = useState("");
   const handleSubmit = (e: any) => {
     e.preventDefault();
     if (name === "creator") {
       localStorage.setItem("user", JSON.stringify(true));
+      localStorage.setItem("userType", "creator");
       setUser("true");
       navigate("/creator?home=true");
     }
     if (name === "user") {
       localStorage.setItem("user", JSON.stringify(true));
+      localStorage.setItem("userType", "user");
       setUser("true");
       navigate("/user?home=true");
     }

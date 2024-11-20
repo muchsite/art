@@ -1,7 +1,7 @@
 import React from "react";
 import "./user.scss";
-import profile from "../../assets/profile.jpeg";
-import edit from "../../assets/editUser.svg";
+import profile from "../../../assets/profile.jpeg";
+import edit from "../../../assets/editUser.svg";
 import { Link, useSearchParams } from "react-router-dom";
 import UserNcHome from "./UserNcHome";
 import UserNcAbout from "./UserNcAbout";

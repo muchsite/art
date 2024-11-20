@@ -18,8 +18,9 @@ import Creator from "./pages/normal/Creator";
 import Series from "./pages/normal/Series";
 import LogIn from "./pages/acc/LogIn";
 import { UserProvider } from "./Context";
-import UserNc from "./pages/user/UserNc";
-import CreatorUser from "./pages/creator/CreatorUser";
+import UserLayout from "./pages/usLayout/UserLayout";
+import Stats from "./pages/stats/Stats";
+
 function App() {
   return (
     <UserProvider>
@@ -39,8 +40,9 @@ function App() {
             <Route element={<Support />} path="/support" />
             <Route element={<Tags />} path="/tags" />
             <Route element={<TagsH />} path="/tagshelp" />
-            <Route element={<UserNc />} path="/user" />
-            <Route element={<CreatorUser />} path="/creator" />
+            <Route element={<UserLayout />} path="/user" />
+            <Route element={<UserLayout />} path="/creator" />
+            <Route element={<Stats />} path="/stats" />
           </Routes>
           <Footer />
         </HashRouter>

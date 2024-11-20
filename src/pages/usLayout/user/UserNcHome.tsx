@@ -1,17 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import f from "../../assets/1.jpeg";
-import s from "../../assets/1.jpeg";
-import t from "../../assets/1.jpeg";
-import fo from "../../assets/1.jpeg";
-import Card from "../../components/card/Card";
-import p1 from "../../assets/profile.jpeg";
-import p2 from "../../assets/profile2.jpeg";
-import p3 from "../../assets/profile3.jpeg";
-import p4 from "../../assets/profile4.jpeg";
-import forum from "../../assets/forum.svg";
+import f from "../../../assets/1.jpeg";
+import s from "../../../assets/1.jpeg";
+import t from "../../../assets/1.jpeg";
+import fo from "../../../assets/1.jpeg";
+import Card from "../../../components/card/Card";
+import p1 from "../../../assets/profile.jpeg";
+import p2 from "../../../assets/profile2.jpeg";
+import p3 from "../../../assets/profile3.jpeg";
+import p4 from "../../../assets/profile4.jpeg";
+import forum from "../../../assets/forum.svg";
 import "./userHome.scss";
-import Followed from "../../components/followed/Followed";
+import Followed from "../../../components/followed/Followed";
 const UserNcHome: React.FC = () => {
   const arr = [f, s, t, fo];
   const arrp = [

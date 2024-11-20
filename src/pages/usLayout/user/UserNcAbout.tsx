@@ -1,12 +1,12 @@
 import React from "react";
 import "./userAbout.scss";
-import sc from "../../assets/Social icon.svg";
-import sc1 from "../../assets/Social icon (1).svg";
-import sc2 from "../../assets/Social icon (2).svg";
-import sc3 from "../../assets/Social icon (3).svg";
-import sc4 from "../../assets/Social icon (4).svg";
-import sc5 from "../../assets/Social icon (5).svg";
-import sc6 from "../../assets/Social icon (6).svg";
+import sc from "../../../assets/Social icon.svg";
+import sc1 from "../../../assets/Social icon (1).svg";
+import sc2 from "../../../assets/Social icon (2).svg";
+import sc3 from "../../../assets/Social icon (3).svg";
+import sc4 from "../../../assets/Social icon (4).svg";
+import sc5 from "../../../assets/Social icon (5).svg";
+import sc6 from "../../../assets/Social icon (6).svg";
 
 const UserNcAbout: React.FC = () => {
   return (

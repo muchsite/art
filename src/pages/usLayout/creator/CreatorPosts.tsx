@@ -1,10 +1,10 @@
 import React from "react";
 import "./cuHome.scss";
-import f from "../../assets/1.jpeg";
-import s from "../../assets/1.jpeg";
-import t from "../../assets/1.jpeg";
-import fo from "../../assets/1.jpeg";
-import Card from "../../components/card/Card";
+import f from "../../../assets/1.jpeg";
+import s from "../../../assets/1.jpeg";
+import t from "../../../assets/1.jpeg";
+import fo from "../../../assets/1.jpeg";
+import Card from "../../../components/card/Card";
 import { Link } from "react-router-dom";
 
 const CreatorPosts = () => {
