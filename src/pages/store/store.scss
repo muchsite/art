@@ -1,0 +1,117 @@
+.store_container {
+  background-color: #000;
+  color: #fff;
+  .store_quick {
+    padding: 24px;
+    h2 {
+      margin-bottom: 56px;
+      color: #d5d5e2;
+      font-size: 32px;
+      font-weight: 600;
+    }
+    .store_items_container {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      .store_item {
+        position: relative;
+        width: 24%;
+        border-radius: 8px;
+        overflow: hidden;
+        height: fit-content;
+        .store_item_text {
+          background-color: #101010;
+          padding: 16px 24px;
+          position: relative;
+          //   margin-top: 2rem;
+
+          z-index: 2;
+        }
+        .store_item_back {
+          z-index: 2;
+          position: relative;
+          width: 100%;
+          height: 79px;
+          background: linear-gradient(
+            180deg,
+            rgba(16, 16, 16, 0) 0%,
+            #101010 100%
+          );
+        }
+        .store_item_text {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          h3 {
+            color: #d5d5e2;
+            font-size: 18px;
+            font-size: 700;
+          }
+          p {
+            color: #d5d5e2;
+            font-size: 14px;
+            font-size: 300;
+          }
+          a {
+            color: #9acdf4;
+            font-size: 14px;
+            font-weight: 300;
+          }
+        }
+        img {
+          width: 100%;
+          position: absolute;
+          z-index: 1;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  .store_f_items {
+    width: 100%;
+    overflow: hidden;
+  }
+  .store_f_items {
+    padding: 3rem;
+  }
+
+  .slick-dots li button:before {
+    color: #6a6a6a;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+  }
+  .slick-dots li.slick-active button:before {
+    color: #d9d9d9;
+  }
+  .store_f_items {
+    padding: 32px 0 32px 24px;
+    h2 {
+      margin-bottom: 56px;
+      color: #d5d5e2;
+      font-size: 32px;
+      font-weight: 600;
+    }
+  }
+  .store_products {
+    padding: 32px 24px;
+    h2 {
+      margin-bottom: 56px;
+      color: #d5d5e2;
+      font-size: 32px;
+      font-weight: 600;
+    }
+    .store_produscts_items {
+      display: flex;
+      gap: 1rem;
+      .store_produscts_item {
+        width: 25%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

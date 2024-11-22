@@ -137,11 +137,14 @@ const Nav: React.FC = () => {
                 <Link onClick={() => setUserMenu(false)} to="/stats">
                   Stats
                 </Link>
-                <Link
-                  onClick={() => setUserMenu(false)}
-                  to="/creator?home=true"
-                >
-                  Messiges
+                <Link onClick={() => setUserMenu(false)} to="/messages">
+                  Messages
+                </Link>
+                <Link onClick={() => setUserMenu(false)} to="/store">
+                  Store
+                </Link>
+                <Link onClick={() => setUserMenu(false)} to="/forums">
+                  Forums
                 </Link>
                 <p onClick={handleLogOut}>Log Out</p>
               </div>

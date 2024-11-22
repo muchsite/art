@@ -20,6 +20,9 @@ import LogIn from "./pages/acc/LogIn";
 import { UserProvider } from "./Context";
 import UserLayout from "./pages/usLayout/UserLayout";
 import Stats from "./pages/stats/Stats";
+import Dms from "./pages/dms/Dms";
+import Store from "./pages/store/Store";
+import Forums from "./pages/forums/Forums";
 
 function App() {
   return (
@@ -43,6 +46,9 @@ function App() {
             <Route element={<UserLayout />} path="/user" />
             <Route element={<UserLayout />} path="/creator" />
             <Route element={<Stats />} path="/stats" />
+            <Route element={<Dms />} path="/messages" />
+            <Route element={<Store />} path="/store" />
+            <Route element={<Forums />} path="/forums" />
           </Routes>
           <Footer />
         </HashRouter>
