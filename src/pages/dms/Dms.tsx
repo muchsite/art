@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./dm.scss";
 import d1 from "../../assets/dm1.svg";
 import d2 from "../../assets/dm2.svg";
@@ -19,6 +19,7 @@ import profilePicture from "../../assets/ProfilePicture.svg";
 import mute from "../../assets/Mute.svg";
 import deafen from "../../assets/Deafen.svg";
 import settings from "../../assets/Settings.svg";
+import ham from "../../assets/menu.svg";
 
 const Dms = () => {
   const dmArr = [
@@ -53,11 +54,13 @@ const Dms = () => {
       desc: "Streaming Minecraft",
     },
   ];
+  const [openLeft, setOpenLeft] = useState(false);
   return (
     <div className="dm_container">
       <div className="dm_head">
-        <div className="dm_head_btn">
+        <div className="dm_head_btn" onClick={() => setOpenLeft(!openLeft)}>
           <button>Find or start a conversation</button>
+          <img src={ham} alt="" />
         </div>
         <div className="dm_right_head">
           <div className="dm_man">
@@ -73,7 +76,7 @@ const Dms = () => {
         </div>
       </div>
       <div className="dm_body_continer">
-        <div className="dm_left">
+        <div className={`dm_left ${openLeft && "dm_left_open"}`}>
           <div className="dm_left_top">
             <div className="dm_left_title">
               <img src={dmMan} alt="" />

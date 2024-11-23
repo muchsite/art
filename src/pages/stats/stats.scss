@@ -1,3 +1,4 @@
+@use "../../App.scss" as *;
 .stats_container {
   background-color: black;
   padding: 2rem;
@@ -5,19 +6,36 @@
   display: flex;
   flex-direction: column;
   gap: 56px;
+  @include breack_down(large) {
+    padding: 28px 12px;
+    gap: 28px;
+  }
   h2 {
     font-size: 32px;
     font-weight: 600;
+    @include breack_down(large) {
+      font-size: 24px;
+    }
   }
   .stats_header {
     display: flex;
     justify-content: space-between;
+    @include breack_down(large) {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+      width: 100%;
+    }
     .stats_nav {
       display: flex;
       p {
         border-bottom: 3px solid #202020;
         padding: 0 28px 16px 28px;
         cursor: pointer;
+        @include breack_down(large) {
+          padding: 0 8px 16px 8px;
+          font-size: 12px;
+        }
       }
       .stats_nav_active {
         border-bottom: 3px solid #15b79e;
@@ -31,6 +49,9 @@
       width: 10rem;
       border: none;
       outline: none;
+      @include breack_down(large) {
+        font-size: 12px;
+      }
     }
   }
   .stats_gr_container {
@@ -40,11 +61,17 @@
     gap: 24px;
     border-radius: 24px;
     padding: 24px;
-
+    @include breack_down(large) {
+      padding: 2px;
+    }
     .stats_l_container {
       display: flex;
       justify-content: space-between;
       width: 100%;
+      @include breack_down(large) {
+        flex-direction: column;
+        gap: 10px;
+      }
       .stats_l_item {
         display: flex;
         justify-content: space-between;
@@ -54,12 +81,22 @@
         background-color: #181919;
         padding: 16px 24px;
         border-radius: 8px;
+        @include breack_down(large) {
+          width: 100%;
+          padding: 12px;
+        }
         .line_text {
           p {
             font-size: 24px;
+            @include breack_down(large) {
+              font-size: 12px;
+            }
           }
           h4 {
             font-size: 48px;
+            @include breack_down(large) {
+              font-size: 24px;
+            }
           }
         }
         .line_cnt {
@@ -71,10 +108,10 @@
       background-color: #000;
       border-radius: 24px;
       padding: 24px;
-      // height: 70vh;
-      // canvas {
-      //   width: 100% !important;
-      // }
+
+      @include breack_down(large) {
+        padding: 12px;
+      }
     }
   }
 }

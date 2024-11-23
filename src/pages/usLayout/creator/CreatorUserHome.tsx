@@ -12,7 +12,7 @@ import "swiper/css/pagination";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import Card from "../../../components/card/Card";
 import { Link } from "react-router-dom";
-
+import Slider from "react-slick";
 const CreatorUserHome = () => {
   const planArr = [
     {
@@ -83,30 +83,93 @@ const CreatorUserHome = () => {
   ];
   const arr = [f, s, t, fo];
   const arr2 = [f, s, t, fo, f, s, t, fo];
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
-    <div className="plans_slider_container">
-      <Swiper
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        loop={false}
-        slidesPerView={"auto"}
-        initialSlide={2}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 200,
-          depth: 50,
-          modifier: 1,
-          scale: 0.9,
-        }}
-        pagination={{ clickable: true }}
-        modules={[EffectCoverflow, Pagination]}
-        className="swiper_container"
-      >
-        {planArr.map((item, index) => {
-          return (
-            <SwiperSlide key={index}>
-              <div className="plan_item">
+    <>
+      <div className="plans_slider_container">
+        <Swiper
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          loop={false}
+          slidesPerView={"auto"}
+          initialSlide={2}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 200,
+            depth: 50,
+            modifier: 1,
+            scale: 0.9,
+          }}
+          pagination={{ clickable: true }}
+          modules={[EffectCoverflow, Pagination]}
+          className="swiper_container"
+        >
+          {planArr.map((item, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <div className="plan_item">
+                  <div className="plan_item_titles">
+                    <h3>{item.title}</h3>
+                    <p>${item.price} /month</p>
+                  </div>
+                  <button>Join</button>
+                  <p>{item.desc}</p>
+                  <ul>
+                    {item.list.map((l, i) => {
+                      return <li key={i}>{l}</li>;
+                    })}
+                  </ul>
+                </div>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+        <div className="creator_home_item">
+          <div className="creator_home_item_title">
+            <h3>Featured Posts</h3>
+            <Link to="/posts">View all</Link>
+          </div>
+          <div className="creator_home_cards_container">
+            {arr.map((item, index) => {
+              return <Card data={{ img: item }} key={index} />;
+            })}
+          </div>
+        </div>
+        <div className="creator_home_item">
+          <div className="creator_home_item_title">
+            <h3>Series</h3>
+            <Link to="/posts">View all</Link>
+          </div>
+          <div className="creator_home_cards_container">
+            {arr.map((item, index) => {
+              return <Card data={{ img: item }} key={index} />;
+            })}
+          </div>
+        </div>
+        <div className="creator_home_item">
+          <div className="creator_home_item_title">
+            <h3>All Posts</h3>
+            <Link to="/posts">View all</Link>
+          </div>
+          <div className="creator_home_cards_container">
+            {arr2.map((item, index) => {
+              return <Card data={{ img: item }} key={index} />;
+            })}
+          </div>
+        </div>
+      </div>
+      <div className="plans_slider_container_moble">
+        <Slider {...settings}>
+          {planArr.map((item, index) => {
+            return (
+              <div className="plan_item" key={index}>
                 <div className="plan_item_titles">
                   <h3>{item.title}</h3>
                   <p>${item.price} /month</p>
@@ -119,44 +182,11 @@ const CreatorUserHome = () => {
                   })}
                 </ul>
               </div>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
-      <div className="creator_home_item">
-        <div className="creator_home_item_title">
-          <h3>Featured Posts</h3>
-          <Link to="/posts">View all</Link>
-        </div>
-        <div className="creator_home_cards_container">
-          {arr.map((item, index) => {
-            return <Card data={{ img: item }} key={index} />;
+            );
           })}
-        </div>
+        </Slider>
       </div>
-      <div className="creator_home_item">
-        <div className="creator_home_item_title">
-          <h3>Series</h3>
-          <Link to="/posts">View all</Link>
-        </div>
-        <div className="creator_home_cards_container">
-          {arr.map((item, index) => {
-            return <Card data={{ img: item }} key={index} />;
-          })}
-        </div>
-      </div>
-      <div className="creator_home_item">
-        <div className="creator_home_item_title">
-          <h3>All Posts</h3>
-          <Link to="/posts">View all</Link>
-        </div>
-        <div className="creator_home_cards_container">
-          {arr2.map((item, index) => {
-            return <Card data={{ img: item }} key={index} />;
-          })}
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 

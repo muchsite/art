@@ -1,3 +1,4 @@
+@use "../../App.scss" as *;
 .forum_container {
   display: flex;
   background-color: #000;
@@ -5,8 +6,15 @@
   padding-left: 24px;
   gap: 24px;
   padding-bottom: 2rem;
+  @include breack_down(large) {
+    flex-direction: column-reverse;
+    padding: 12px;
+  }
   .forum_left {
     width: 20%;
+    @include breack_down(large) {
+      width: 100%;
+    }
     .forum_details_btn {
       margin: 32px 0;
       padding: 12px 16px;
@@ -15,6 +23,11 @@
       align-items: center;
       border: 1px solid #15b79e;
       border-radius: 44px;
+      @include breack_down(large) {
+        flex-direction: row;
+      }
+      @include breack_down(large) {
+      }
       .forum_details_left {
         img {
           height: 20px;
@@ -29,7 +42,7 @@
       background-color: #101010;
       border-radius: 24px;
       padding: 16px;
-      height: 80vh;
+      min-height: 80vh;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -118,6 +131,9 @@
     }
   }
   .forum_right {
+    @include breack_down(large) {
+      width: 100%;
+    }
     width: 80%;
     padding-bottom: 32px;
     display: flex;
@@ -128,18 +144,31 @@
       display: flex;
       flex-direction: column;
       gap: 32px;
+      @include breack_down(large) {
+        padding: 8px;
+      }
       .forum_hero_title {
         display: flex;
         align-items: center;
         gap: 16px;
+        @include breack_down(large) {
+          gap: 8px;
+        }
         .forum_hero_icon {
           width: 34px;
           height: 34px;
+          @include breack_down(large) {
+            width: 18px;
+            height: 18px;
+          }
         }
         h2 {
           color: #d5d5e2;
           font-size: 32px;
           font-weight: 600;
+          @include breack_down(large) {
+            font-size: 18px;
+          }
         }
       }
       .forum_hero_body {
@@ -159,6 +188,9 @@
             color: #d5d5e2;
             font-size: 18px;
             font-weight: 700;
+            @include breack_down(large) {
+              font-size: 16px;
+            }
           }
           p {
             color: #d5d5e2;
@@ -180,6 +212,15 @@
             font-size: 32px;
             font-weight: 600;
             color: #d5d5e2;
+            @include breack_down(large) {
+              font-size: 18px;
+            }
+          }
+          img {
+            @include breack_down(large) {
+              width: 18px;
+              height: 18px;
+            }
           }
         }
         .forum_items {
@@ -197,11 +238,17 @@
               color: #d5d5e2;
               font-size: 18px;
               font-weight: 700;
+              @include breack_down(large) {
+                font-size: 14px;
+              }
             }
             p {
               color: #d5d5e2;
               font-size: 14px;
               font-weight: 300;
+              @include breack_down(large) {
+                font-size: 12px;
+              }
             }
           }
         }

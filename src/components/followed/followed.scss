@@ -1,3 +1,4 @@
+@use "../../App.scss" as *;
 .followed_container {
   background-color: #181919;
   width: fit-content;
@@ -9,31 +10,51 @@
   padding: 24px;
   border-radius: 24px;
   width: calc(20% - 32px);
+  @include breack_down(large) {
+    width: 95%;
+    padding: 12px;
+  }
   .followed_top {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
     text-align: center;
+    @include breack_down(large) {
+      gap: 8px;
+    }
     h4 {
       font-size: 24px;
       color: #fff;
+      @include breack_down(large) {
+        font-size: 18px;
+      }
     }
     p {
       font-size: 16px;
       color: #c0c0c0;
+      @include breack_down(large) {
+        font-size: 12px;
+      }
     }
     .followed_avatar {
       width: 76px;
       height: 76px;
       border-radius: 50%;
       object-fit: cover;
+      @include breack_down(large) {
+        width: 50px;
+        height: 50px;
+      }
     }
   }
   .followed_buttons {
     display: flex;
     gap: 12px;
     width: 100%;
+    @include breack_down(large) {
+      gap: 8px;
+    }
     button {
       display: flex;
       align-items: center;
@@ -44,6 +65,9 @@
       border-radius: 8px;
       padding: 16px 0;
       cursor: pointer;
+      @include breack_down(large) {
+        padding: 8px;
+      }
     }
     .followed_unf_btn {
       background-color: #15b79e;

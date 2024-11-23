@@ -1,3 +1,4 @@
+@use "../../../App.scss" as *;
 .container {
   max-width: 124rem;
   padding: 4rem 1rem;
@@ -132,6 +133,9 @@
 .plans_slider_container {
   margin: 3rem 0;
   padding: 2rem 7rem;
+  @include breack_down(large) {
+    display: none !important;
+  }
   .plan_item {
     background-color: #181919;
     padding: 64px 40px;
@@ -186,6 +190,114 @@
       font-weight: 400;
       text-decoration: none;
       color: #0e6db7;
+    }
+  }
+  .creator_home_cards_container {
+    width: 100%;
+    height: fit-content;
+    gap: 10px;
+    row-gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+}
+.plans_slider_container_moble {
+  @include breack_up(medium) {
+    display: none !important;
+  }
+  padding: 2rem;
+  .slick-dots {
+    // background-color: red;
+    .slick-active {
+      background-color: #d9d9d9;
+      button {
+        &::before,
+        &::after {
+          color: #d9d9d9;
+        }
+      }
+    }
+    li {
+      background-color: #6a6a6a;
+      border-radius: 50%;
+      width: 1rem;
+      height: 1rem;
+      button {
+        &::before,
+        &::after {
+          color: #6a6a6a;
+        }
+      }
+    }
+  }
+  .plan_item {
+    background-color: #181919;
+    padding: 12px;
+    box-shadow: 0 0 0px #ffffff40;
+    border-radius: 8px;
+    margin-top: 1rem;
+    display: flex !important;
+    flex-direction: column;
+    gap: 12px;
+    color: #ffffff;
+
+    h3 {
+      font-size: 24px;
+      font-weight: 500;
+    }
+    p {
+      font-size: 12px;
+      font-weight: 400;
+    }
+    button {
+      background-color: #15b79e;
+      font-size: 12px;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 0;
+      color: #ffffff;
+      width: 100%;
+    }
+    ul {
+      margin-left: 1rem;
+      font-size: 12px;
+    }
+  }
+}
+
+.creator_home_item {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 56px;
+  @include breack_down(large) {
+    gap: 12px;
+    margin-top: 24px;
+  }
+  .creator_home_item_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include breack_down(large) {
+      padding: 0 12px;
+    }
+    h3 {
+      font-size: 32px;
+      font-weight: 600;
+      color: #d5d5e2;
+      @include breack_down(large) {
+        font-size: 24px;
+      }
+    }
+    a {
+      font-size: 24px;
+      font-weight: 400;
+      text-decoration: none;
+      color: #0e6db7;
+      @include breack_down(large) {
+        font-size: 12px;
+      }
     }
   }
   .creator_home_cards_container {

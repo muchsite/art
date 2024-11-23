@@ -1,10 +1,14 @@
+@use "../../../App.scss" as *;
 .user_container {
   background-color: #000;
   padding: 32px 24px;
+  @include breack_down(large) {
+    padding: 0px;
+  }
 }
 .user_container {
   .user_hero {
-    height: 60vh;
+    height: 40vh;
     background-image: linear-gradient(to bottom, #10101099, #10101099),
       url("../../../assets/home.png");
     background-position: center;
@@ -15,6 +19,9 @@
     justify-content: flex-end;
     padding: 48px;
     position: relative;
+    @include breack_down(large) {
+      padding: 12px;
+    }
     .edit_user_icon {
       width: 56px;
       height: 56px;
@@ -22,17 +29,30 @@
       top: 48px;
       right: 48px;
       cursor: pointer;
+      @include breack_down(large) {
+        width: 20px;
+        height: 20px;
+        top: 24px;
+        right: 12px;
+      }
     }
     .user_info {
       display: flex;
       align-items: center;
       gap: 23px;
+      @include breack_down(large) {
+        justify-content: center;
+      }
       img {
         width: 148px;
         height: 148px;
         object-fit: cover;
         border-radius: 50%;
         outline: 1px solid #15b79e;
+        @include breack_down(large) {
+          width: 50px;
+          height: 50px;
+        }
       }
       .user_text {
         display: flex;
@@ -42,14 +62,23 @@
           color: #fff;
           font-size: 48px;
           font-weight: 700;
+          @include breack_down(large) {
+            font-size: 24px;
+          }
         }
         .user_stats {
           color: #c0c0c0;
           display: flex;
           align-items: center;
           gap: 40px;
+          @include breack_down(large) {
+            gap: 12px;
+          }
           p {
             font-size: 36px;
+            @include breack_down(large) {
+              font-size: 14px;
+            }
           }
         }
       }
@@ -60,11 +89,18 @@
     background-color: #181919;
     gap: 64px;
     padding: 32px 48px;
+    @include breack_down(large) {
+      padding: 24px;
+      justify-content: center;
+    }
     a {
       color: #d5d5e2;
       text-decoration: none;
       font-size: 24px;
       font-weight: 500;
+      @include breack_down(large) {
+        font-size: 14px;
+      }
     }
     .user_page_link {
       position: relative;
@@ -75,7 +111,7 @@
         width: 0%;
         height: 4px;
         border-radius: 10px;
-        bottom: -32px;
+        bottom: -22px;
         left: 50%;
         translate: -50% 0;
         background-color: #15b79e;

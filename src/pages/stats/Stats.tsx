@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Bar, Line } from "react-chartjs-2";
 import "./stats.scss";
 import {
@@ -61,12 +61,36 @@ const Stats = () => {
       },
     ],
   };
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setViewportWidth(window.innerWidth);
+    };
+
+    setViewportWidth(window.innerWidth);
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const options2: ChartOptions<"bar"> = {
     responsive: true,
     plugins: {
       legend: {
         display: true, // Display legend (optional)
         position: "bottom", // Place legend at the bottom
+        labels: {
+          font: {
+            size: 24,
+          },
+          boxWidth: 16,
+          boxHeight: 16,
+          padding: 32,
+        },
       },
       tooltip: {
         enabled: true, // Enable tooltips (optional)
@@ -91,28 +115,102 @@ const Stats = () => {
           display: false, // Disable vertical grid lines
         },
         title: {
-          display: true,
+          display: false,
           text: "Months",
         },
+        ticks: {
+          font: {
+            size: 20, // Default font size for y-axis labels
+          },
+        },
       },
+
       y: {
         grid: {
           color: "#505050", // Change the grid line color
           lineWidth: 0.5, // Set the thickness of the grid lines
-          // borderDash: [5, 5], // Create dashed lines
-          // drawBorder: false, // Hide the border line at the edge of the chart
-          drawOnChartArea: true, // Display grid lines across the chart area
           drawTicks: false, // Disable ticks on the grid lines
         },
         title: {
           display: false,
           text: "Values",
         },
+        ticks: {
+          font: {
+            size: 22,
+          },
+        },
         beginAtZero: true,
       },
     },
   };
+  const options2Moble: ChartOptions<"bar"> = {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: true, // Display legend (optional)
+        position: "bottom", // Place legend at the bottom
+        labels: {
+          font: {
+            size: 8,
+          },
+          boxWidth: 5,
+          boxHeight: 5,
+          padding: 2,
+        },
+      },
+      tooltip: {
+        enabled: true, // Enable tooltips (optional)
+      },
+      title: {
+        display: true, // Enable the title
+        text: "Analysis", // Title text
+        font: {
+          size: 12, // Font size
+          weight: "bold", // Font weight
+        },
+        padding: {
+          top: 0,
+          bottom: 5,
+        },
+        align: "start",
+      },
+    },
+    scales: {
+      x: {
+        grid: {
+          display: false, // Disable vertical grid lines
+        },
+        title: {
+          display: false,
+          text: "Months",
+        },
+        ticks: {
+          font: {
+            size: 5, // Default font size for y-axis labels
+          },
+        },
+      },
 
+      y: {
+        grid: {
+          color: "#505050", // Change the grid line color
+          lineWidth: 0.5, // Set the thickness of the grid lines
+          drawTicks: false, // Disable ticks on the grid lines
+        },
+        title: {
+          display: false,
+          text: "Values",
+        },
+        ticks: {
+          font: {
+            size: 7,
+          },
+        },
+        beginAtZero: true,
+      },
+    },
+  };
   const createGradient = (ctx: any, area: any) => {
     if (!area) return null;
     const gradient = ctx.createLinearGradient(0, 0, 0, area.bottom);
@@ -243,7 +341,10 @@ const Stats = () => {
           </div>
         </div>
         <div className="stats_b_container">
-          <Bar data={data} options={options2} />
+          <Bar
+            data={data}
+            options={viewportWidth > 800 ? options2 : options2Moble}
+          />
         </div>
       </div>
     </div>
